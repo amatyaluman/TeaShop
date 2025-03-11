@@ -48,6 +48,7 @@ header .logo h1 {
 
 nav ul {
   list-style: none;
+  display: flex;
 }
 
 nav ul li {
@@ -170,6 +171,7 @@ footer {
     right: 0;
     width: 100%;
     text-align: center;
+    z-index: 999;
   }
 
   nav ul li {
