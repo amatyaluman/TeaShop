@@ -7,15 +7,15 @@
 body {
   display: flex;
   flex-direction: column;
-  min-height: 100vh; /* Full height of the viewport */
+  min-height: 100vh;
 }
 
 main {
-  flex-grow: 1; /* This ensures the main content area grows and pushes the footer to the bottom */
+  flex-grow: 1;
 }
 
 header {
-  background-color: #d9c6a1; /* Beige background for header */
+  background-color: #d9c6a1;
   color: #5d4e2e;
   padding: 1rem;
   display: flex;
@@ -29,14 +29,14 @@ header .logo {
 }
 
 header .logo a {
-  text-decoration: none; /* Remove underline */
-  color: #5d4e2e; /* Keep the text color white */
+  text-decoration: none;
+  color: #5d4e2e;
   display: flex;
   align-items: center;
 }
 
 header .logo-img {
-  width: 100px; /* Increased the size of the logo */
+  width: 100px;
   height: auto;
   margin-right: 15px;
 }
@@ -60,9 +60,16 @@ nav ul li a {
   text-decoration: none;
 }
 
+.hamburger {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+  color: #5d4e2e;
+}
+
 .hero {
-  background: #ede8dd; /* Lighter beige for hero section */
-  color: #5d4e2e; /* Dark brown text */
+  background: #ede8dd;
+  color: #5d4e2e;
   padding: 2rem;
   text-align: center;
   position: relative;
@@ -84,6 +91,7 @@ nav ul li a {
 .hero p {
   font-size: 1.2rem;
 }
+
 .menu {
   text-align: center;
   padding: 2rem;
@@ -118,34 +126,61 @@ nav ul li a {
   font-size: 1.5rem;
   margin-bottom: 0.5rem;
 }
+
 footer {
   text-align: center;
-  background-color: #d9c6a1; /* Same brown as header */
+  background-color: #d9c6a1;
   color: #5d4e2e;
   padding: 1rem;
   width: 100%;
-  margin-top: auto; /* Pushes footer down when content is short */
+  margin-top: auto;
 }
 
 .about,
 .contact {
-  background-color: #e1cea7; /* Beige background for about and contact */
+  background-color: #e1cea7;
   padding: 2rem;
   margin: 2rem auto;
   max-width: 800px;
-  border-radius: 8px; /* Rounded corners */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .about h2,
 .contact h2 {
   font-size: 2rem;
   margin-bottom: 1rem;
-  text-align: center; /* Center align the headings */
+  text-align: center;
 }
 
 .about p,
 .contact p {
   font-size: 1.2rem;
   color: #5d4e2e;
+}
+
+/* Responsive styles for the hamburger menu */
+@media screen and (max-width: 768px) {
+  nav ul {
+    display: none;
+    flex-direction: column;
+    background-color: #d9c6a1;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  nav.open ul {
+    display: flex;
+  }
 }
