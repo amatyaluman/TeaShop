@@ -159,19 +159,17 @@ footer {
   font-size: 1.2rem;
   color: #5d4e2e;
 }
-
 /* Responsive styles for the hamburger menu */
 @media screen and (max-width: 768px) {
   nav ul {
-    display: none;
+    display: none; /* Hide the menu by default */
     flex-direction: column;
     background-color: #d9c6a1;
     position: absolute;
-    top: 60px;
+    top: 60px; /* Adjust this value based on your header height */
     right: 0;
     width: 100%;
     text-align: center;
-    z-index: 999;
   }
 
   nav ul li {
@@ -179,10 +177,11 @@ footer {
   }
 
   .hamburger {
-    display: block;
+    display: block; /* Show the hamburger icon */
   }
 
-  nav.open ul {
+  /* Add this rule to display the menu when the .open class is applied */
+  nav ul.open {
     display: flex;
   }
 }
