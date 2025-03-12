@@ -83,9 +83,8 @@ nav ul li a {
 .banner-content {
   display: flex;
   align-items: center;
-  gap: 2rem;
+  gap: 2rem; /* Space between image and text */
   justify-content: center;
-  flex-wrap: wrap; /* Allow items to wrap on smaller screens */
 }
 
 .banner-image {
@@ -111,7 +110,7 @@ nav ul li a {
   text-align: justify;
 }
 
-/* Responsive adjustments */
+/* Responsive adjustments for medium and small screens */
 @media screen and (max-width: 1024px) {
   .banner-content {
     flex-direction: column; /* Stack text and image on medium screens */
@@ -124,7 +123,7 @@ nav ul li a {
 
   .banner-text {
     width: 80%; /* Adjust text width for medium screens */
-    text-align: center; /* Center text on smaller screens */
+    text-align: center; /* Center text on medium screens */
   }
 
   .banner-text h2 {
