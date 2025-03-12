@@ -84,6 +84,8 @@ nav ul li a {
   display: flex;
   align-items: center;
   gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap; /* Allow items to wrap on smaller screens */
 }
 
 .banner-image {
@@ -95,15 +97,67 @@ nav ul li a {
 
 .banner-text {
   width: 40%;
+  text-align: left;
 }
 
 .banner-text h2 {
   font-size: 2rem;
   margin-bottom: 1rem;
+  text-align: center;
 }
 
 .banner-text p {
   font-size: 1.2rem;
+  text-align: justify;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 1024px) {
+  .banner-content {
+    flex-direction: column; /* Stack text and image on medium screens */
+    align-items: center;
+  }
+
+  .banner-image {
+    width: 80%; /* Adjust image size for medium screens */
+  }
+
+  .banner-text {
+    width: 80%; /* Adjust text width for medium screens */
+    text-align: center; /* Center text on smaller screens */
+  }
+
+  .banner-text h2 {
+    font-size: 1.8rem; /* Adjust heading size */
+  }
+
+  .banner-text p {
+    font-size: 1rem; /* Adjust paragraph font size */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .banner-content {
+    flex-direction: column; /* Stack content on mobile screens */
+    align-items: center;
+  }
+
+  .banner-image {
+    width: 90%; /* Adjust image width for small screens */
+  }
+
+  .banner-text {
+    width: 90%; /* Adjust text width for small screens */
+    text-align: center;
+  }
+
+  .banner-text h2 {
+    font-size: 1.6rem; /* Adjust heading size further for smaller screens */
+  }
+
+  .banner-text p {
+    font-size: 1rem; /* Adjust paragraph font size */
+  }
 }
 
 .menu {
