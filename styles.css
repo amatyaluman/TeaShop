@@ -193,6 +193,39 @@ nav ul li a {
   font-size: 1.5rem;
   margin-bottom: 0.5rem;
 }
+
+/* Responsive adjustments for medium and small screens */
+@media screen and (max-width: 1024px) {
+  .menu-images {
+    grid-template-columns: repeat(
+      2,
+      1fr
+    ); /* Adjust to 2 columns for medium screens */
+  }
+
+  .menu-item img {
+    max-width: 300px; /* Resize images for medium screens */
+  }
+
+  .menu-item h3 {
+    font-size: 1.3rem; /* Adjust heading size */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .menu-images {
+    grid-template-columns: 1fr; /* Stack items in a single column on mobile screens */
+  }
+
+  .menu-item img {
+    max-width: 100%; /* Make images responsive to screen size */
+  }
+
+  .menu-item h3 {
+    font-size: 1.2rem; /* Adjust heading size for small screens */
+  }
+}
+
 .hmenu {
   text-align: center;
   padding: 3rem; /* Increased padding */
